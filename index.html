@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="A website that generates multiple ways you can watch the 2022 Netflix series &#34;Kaleidoscope&#34;"
+        />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <link
+            rel="canonical"
+            href="https://vishalnandagopal.com/kaleidoscope"
+        />
+
+        <title>Kaleidoscope Episode Order Generator</title>
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://vishalnandagopal.com/kaleidoscope"
+        />
+        <meta
+            property="og:title"
+            content="Kaleidoscope series episode order generator"
+        />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/assets/css/main.css" />
+
+        <!-- Favicon -->
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+        <!-- background color in inline css to prevent flashes when loading through college wifi (slow), and to prevent weird scaling down of svgs because width isn't set-->
+        <style>
+            body {
+                background-color: #161616;
+            }
+            @media screen and (prefers-color-scheme: light) {
+                body {
+                    background-color: initial;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Main body begins -->
+        <main>
+            <h1>Kaleidoscope Episode Order Generator</h1>
+            <form
+                onsubmit="return false"
+                method="post"
+                action="/index.html"
+                id="f"
+                name="f"
+            >
+                <div>
+                    <input
+                        type="checkbox"
+                        name="black-at-beginning"
+                        id="black-at-beginning"
+                        value="yes"
+                        checked
+                    />
+                    <label for="black-at-beginning"
+                        >Watch series trailer "Black" in the beginning?
+                        (Recommended)</label
+                    >
+                </div>
+                <div>
+                    <input
+                        type="checkbox"
+                        name="white-at-end"
+                        id="white-at-end"
+                        value="yes"
+                        checked
+                    />
+                    <label for="white-at-end"
+                        >Watch episode "White" at the end? (Recommended)</label
+                    >
+                </div>
+                <button id="submit-button">Generate episode order!</button>
+            </form>
+            <section id="episodes-order"></section>
+        </main>
+
+        <!-- Footer begins  -->
+        <footer>
+            <p class="pagesource">
+                The source for this page can be found
+                <a
+                    id="pagelink"
+                    href="https://github.com/vishalnandagopal/kaleidoscope"
+                    >here</a
+                >
+            </p>
+            <p><a href="/license">License and copyright</a></p>
+        </footer>
+        <script defer type="module" src="/assets/js/main.js"></script>
+    </body>
+</html>
